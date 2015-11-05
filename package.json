@@ -1,0 +1,20 @@
+{
+  "name": "jscs-ember-deprecations",
+  "version": "1.0.0",
+  "description": "",
+  "main": "lib/index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "chai": "^2.3.0",
+    "chai-subset": "^1.1.0",
+    "jscs": "^2.1.1",
+    "jshint": "^2.7.0",
+    "mocha": "^2.2.4"
+  },
+  "author": "Christopher Troup",
+  "license": "MIT"
+}
