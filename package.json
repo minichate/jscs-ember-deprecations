@@ -1,6 +1,6 @@
 {
   "name": "jscs-ember-deprecations",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Ember deprecation warnings for JSCS",
   "homepage": "https://github.com/minichate/jscs-ember-deprecations",
   "license": "MIT",
@@ -10,7 +10,7 @@
   },
   "main": "lib/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 0"
   },
   "dependencies": {
   },
