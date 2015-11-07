@@ -10,7 +10,8 @@
   },
   "main": "lib/index",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "lint": "jshint lib test && jscs lib test",
+    "test": "npm run lint && mocha"
   },
   "dependencies": {
   },
