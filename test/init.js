@@ -1,6 +1,7 @@
 var Checker = require('jscs/lib/checker');
 var chai = require('chai');
 var expect = chai.expect;
+var merge = require('merge');
 
 chai.use(require('chai-subset'));
 
@@ -71,8 +72,7 @@ function rulesChecker(opts) {
     rules: function(rules, opts) {
       beforeEach(function() {
         opts = opts || {};
-        opts.jsDoc = rules;
-        checker.configure(opts);
+        checker.configure(merge(opts, rules));
       });
     },
 
@@ -82,7 +82,7 @@ function rulesChecker(opts) {
      * @param {Object} rules
      */
     configure: function(rules) {
-      checker.configure({jsDoc: rules});
+      checker.configure(rules);
     },
 
     /**
@@ -96,7 +96,7 @@ function rulesChecker(opts) {
 
         (test.skip ? it.skip : it)(test.it, function() {
           if (test.rules) {
-            checker.configure({ jsDoc: test.rules });
+            checker.configure(test.rules);
           }
 
           var body = test.code.call ? fnBody(test.code) : test.code;
