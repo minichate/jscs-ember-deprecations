@@ -1,5 +1,7 @@
 # jscs-ember-deprecations
 
+[![Build Status](https://travis-ci.org/minichate/jscs-ember-deprecations.svg?branch=master)](https://travis-ci.org/minichate/jscs-ember-deprecations)
+
 This plugin extends JSCS to include errors for features that are deprecated in Ember.js
 
 ## Installation
