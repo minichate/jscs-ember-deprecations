@@ -15,7 +15,7 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "chai": "^2.3.0",
+    "chai": "^3.4.0",
     "chai-subset": "^1.1.0",
     "jscs": "^2.1.1",
     "jshint": "^2.7.0",
