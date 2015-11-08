@@ -108,7 +108,7 @@ describe('lib/rules/disallow-prototypeextension', function () {
           },
           errors: [{
             column: 20, line: 4, filename: 'input', rule: 'disallowPrototypeExtension', fixed: undefined,
-            message: 'Don\'t use the Ember .observes() prototype extension. Use Ember.computed() instead'
+            message: 'Don\'t use the Ember .observes() prototype extension. Use Ember.observer() instead'
           }]
         }, {
           it: 'should not report',
@@ -119,6 +119,20 @@ describe('lib/rules/disallow-prototypeextension', function () {
               })
             });
           }
+        }, {
+          it: 'should report deprecated use',
+          errors: 1,
+          code: function() {
+            Ember.Controller.extend({
+              foo: Ember.computed(function() {
+
+              }).observesBefore('bar')
+            });
+          },
+          errors: [{
+            column: 26, line: 4, filename: 'input', rule: 'disallowPrototypeExtension', fixed: undefined,
+            message: 'Don\'t use the Ember .observesBefore() prototype extension. Use addObserver instead'
+          }]
         }
         /* jshint ignore:end */
       ]);
