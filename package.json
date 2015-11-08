@@ -11,16 +11,22 @@
   "main": "lib/index",
   "scripts": {
     "lint": "jshint lib test && jscs lib test",
-    "test": "npm run lint && mocha"
+    "test": "npm run lint && mocha",
+    "coverage": "istanbul cover _mocha && cat ./coverage/lcov.info",
+    "coveralls": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls",
+    "travis": "npm run test && npm run coveralls"
   },
   "dependencies": {},
   "devDependencies": {
     "chai": "^3.4.0",
     "chai-subset": "^1.1.0",
+    "coveralls": "^2.11.4",
+    "istanbul": "^0.4.0",
     "jscs": "^2.1.1",
     "jshint": "^2.7.0",
     "merge": "^1.2.0",
-    "mocha": "^2.2.4"
+    "mocha": "^2.2.4",
+    "mocha-lcov-reporter": "^1.0.0"
   },
   "author": "Christopher Troup"
 }
