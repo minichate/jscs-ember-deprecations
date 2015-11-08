@@ -3,6 +3,7 @@
 [![Build Status](https://travis-ci.org/minichate/jscs-ember-deprecations.svg?branch=master)](https://travis-ci.org/minichate/jscs-ember-deprecations)
 [![Dependency Status](https://david-dm.org/minichate/jscs-ember-deprecations.svg)](https://david-dm.org/minichate/jscs-ember-deprecations)
 [![devDependency Status](https://david-dm.org/minichate/jscs-ember-deprecations/dev-status.svg)](https://david-dm.org/minichate/jscs-ember-deprecations#info=devDependencies)
+[![Coverage Status](https://coveralls.io/repos/minichate/jscs-ember-deprecations/badge.svg?branch=master&service=github)](https://coveralls.io/github/minichate/jscs-ember-deprecations?branch=master)
 
 This plugin extends JSCS to include errors for features that are deprecated in Ember.js
 
