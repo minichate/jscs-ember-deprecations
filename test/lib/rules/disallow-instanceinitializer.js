@@ -45,6 +45,19 @@ describe('lib/rules/disallow-instanceinitializer', function () {
             });
           }
         }, {
+          it: 'should not report',
+          code: function() {
+            Almost.theSame({
+              name: "clock",
+
+              butNotQuite: function(container, application) {
+                application.register("clock:main", Clock);
+                var clock = container.lookup("clock:main");
+                clock.setStartTime(Date.now());
+              }
+            });
+          }
+        }, {
           it: 'should report deprecated use',
           errors: 1,
           code: function() {
