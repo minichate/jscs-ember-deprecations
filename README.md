@@ -22,6 +22,8 @@ You'll also need to tell JSCS to load the plugin. Modify your `.jscsrc` file to 
 "disallowObjectController": true,
 "disallowInstanceInInitializer": true,
 "disallowPrototypeExtension": true,
+"disallowAtEachLeafNode": true,
+// ...
 ```
 
 ## Supported deprecations
@@ -31,6 +33,10 @@ You'll also need to tell JSCS to load the plugin. Modify your `.jscsrc` file to 
  `disallowObjectController` will warn you if you use the deprecated Ember.ObjectController. See http://emberjs.com/deprecations/v1.x/#toc_objectcontroller for details.
 
  `disallowInstanceInInitializer` will warn you if you are looking up instances within an initializer. See http://emberjs.com/deprecations/v1.x/#toc_access-to-instances-in-initializers for details.
+
+### Deprecations added in Ember 1.13
+
+`disallowAtEachLeafNode` will warn you if you use the deprecated `foo.@each` notation. See https://github.com/emberjs/ember.js/pull/11994 for details.
 
 ### Other Ember best practices
 
