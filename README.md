@@ -38,6 +38,8 @@ You'll also need to tell JSCS to load the plugin. Modify your `.jscsrc` file to 
 
 `disallowCoreView` will warn you if you use the deprecated Ember.CoreView. See [https://github.com/emberjs/ember.js/pull/10585] for details.
 
+`disallowEmberTryCatch` will warn you if you use the deprecated `Ember.tryCatch` or `Ember.tryCatchFinally` helpers. See [https://github.com/emberjs/ember.js/pull/10667] for details.
+
 ### Deprecations added in Ember 1.13
 
 `disallowAtEachLeafNode` will warn you if you use the deprecated `foo.@each` notation. See [https://github.com/emberjs/ember.js/pull/11994] for details.
