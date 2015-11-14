@@ -30,9 +30,13 @@ You'll also need to tell JSCS to load the plugin. Modify your `.jscsrc` file to 
 
 ### Deprecations added in Ember 1.11
 
- `disallowObjectController` will warn you if you use the deprecated Ember.ObjectController. See [http://emberjs.com/deprecations/v1.x/#toc_objectcontroller] for details.
+`disallowObjectController` will warn you if you use the deprecated Ember.ObjectController. See [http://emberjs.com/deprecations/v1.x/#toc_objectcontroller] for details.
 
- `disallowInstanceInInitializer` will warn you if you are looking up instances within an initializer. See [http://emberjs.com/deprecations/v1.x/#toc_access-to-instances-in-initializers] for details.
+`disallowInstanceInInitializer` will warn you if you are looking up instances within an initializer. See [http://emberjs.com/deprecations/v1.x/#toc_access-to-instances-in-initializers] for details.
+
+### Deprecations added in Ember 1.12
+
+`disallowCoreView` will warn you if you use the deprecated Ember.CoreView. See [https://github.com/emberjs/ember.js/pull/10585] for details.
 
 ### Deprecations added in Ember 1.13
 
@@ -44,4 +48,4 @@ You'll also need to tell JSCS to load the plugin. Modify your `.jscsrc` file to 
 
 # Licence
 
- This library is lovingly brought to you by @minichate. It is released under the MIT license.
+This library is lovingly brought to you by @minichate. It is released under the MIT license.

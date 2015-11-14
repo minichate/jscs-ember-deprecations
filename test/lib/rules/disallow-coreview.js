@@ -1,0 +1,72 @@
+describe('lib/rules/disallow-objectcontroller', function () {
+    var checker = global.checker({
+        plugins: ['./lib/index']
+    });
+
+    describe('not configured', function() {
+
+      it('should report with undefined', function() {
+        global.expect(function() {
+          checker.configure({disallowCoreView: undefined});
+        }).to.throws(/requires a true value/i);
+      });
+
+      it('should report with an object', function() {
+        global.expect(function() {
+          checker.configure({disallowCoreView: {}});
+        }).to.throws(/requires a true value/i);
+      });
+
+    });
+
+    describe('with true', function() {
+      checker.rules({disallowCoreView: true});
+
+      checker.cases([
+        /* jshint ignore:start */
+        {
+          it: 'should not report',
+          code: function() {
+            Ember.View.extend({
+
+            });
+          }
+        }, {
+          it: 'should not report',
+          code: function() {
+            var foo = Ember.CoreView;
+          }
+        }, {
+          it: 'should not report',
+          code: function() {
+            Ember.CoreView.foo();
+          }
+        }, {
+          it: 'should report deprecated use',
+          errors: 1,
+          code: function() {
+            Ember.CoreView.extend({
+
+            });
+          },
+          errors: [{
+            column: 6, line: 1, filename: 'input', rule: 'disallowCoreView', fixed: undefined,
+            message: 'CoreView is deprecated in Ember 1.12'
+          }]
+        }, {
+          it: 'should report deprecated use',
+          errors: 1,
+          code: function() {
+            var foo = Ember.CoreView.create({
+
+            });
+          },
+          errors: [{
+            column: 16, line: 1, filename: 'input', rule: 'disallowCoreView', fixed: undefined,
+            message: 'CoreView is deprecated in Ember 1.12'
+          }]
+        }
+        /* jshint ignore:end */
+      ]);
+    });
+});
