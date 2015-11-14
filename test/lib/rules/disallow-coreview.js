@@ -1,4 +1,4 @@
-describe('lib/rules/disallow-objectcontroller', function () {
+describe('lib/rules/disallow-coreview', function () {
     var checker = global.checker({
         plugins: ['./lib/index']
     });
