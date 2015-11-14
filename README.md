@@ -26,6 +26,19 @@ You'll also need to tell JSCS to load the plugin. Modify your `.jscsrc` file to 
 // ...
 ```
 
+See [Supported deprecations](#supported-deprecations) for valid keys
+
+## Why
+
+Migrating to a newer Ember version can be tricky if you haven't already gone back and removed all uses of deprecated features. Instead, this plugin intends to enable a migration path in a codebase, where developers can be warned when they use deprecated features.
+
+A sample use case is to:
+
+- Use a tool like [Lint Review](https://github.com/markstory/lint-review) to automagically annotate pull requests. Developers will be warned if they're using a feature that is deprecated. Put these "aspirational" rules in `.toolbot_jscsrc`
+- Use `broccoli-jscs` so that JSCS gets run at the same time you're running unit tests. Put rules that are "mandatory" in your codebase's `.jscsrc`. Any violations of those rules will result in the test suite failing.
+
+This way a codebase can be gradually brought into compliance over time.
+
 ## Supported deprecations
 
 ### Deprecations added in Ember 1.11
