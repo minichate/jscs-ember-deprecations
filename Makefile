@@ -1,3 +1,5 @@
+REMOTE=origin
+
 # Utility target for checking required parameters
 guard-%:
 	@if [ "$($*)" = '' ]; then \
@@ -17,4 +19,4 @@ release: guard-VERSION
 	git tag release/$(VERSION) -m 'jscs-ember-deprecations $(VERSION) - $(DATE)'
 	git push $(REMOTE) --tags
 	git push $(REMOTE) master
-	#npm publish
+	npm publish
