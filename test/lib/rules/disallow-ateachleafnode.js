@@ -37,6 +37,15 @@ describe('lib/rules/disallow-ateachleafnode', function () {
           it: 'should not report',
           code: function() {
             var a = {
+              foo: Ember.notathing('bar.@each', function() {
+
+              })
+            };
+          }
+        }, {
+          it: 'should not report',
+          code: function() {
+            var a = {
               foo: Ember.computed('bar.@each.baz', function() {
 
               })
