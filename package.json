@@ -1,6 +1,6 @@
 {
   "name": "jscs-ember-deprecations",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "description": "Ember deprecation warnings for JSCS",
   "homepage": "https://github.com/minichate/jscs-ember-deprecations",
   "license": "MIT",
