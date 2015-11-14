@@ -33,6 +33,9 @@
     "mocha": "^2.2.4",
     "mocha-lcov-reporter": "^1.0.0"
   },
+  "peerDependencies": {
+    "jscs": "2.x"
+  },
   "keywords": [
     "ember",
     "jscs"
