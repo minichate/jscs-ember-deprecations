@@ -43,25 +43,25 @@ This way a codebase can be gradually brought into compliance over time.
 
 ### Deprecations added in Ember 1.11
 
-`disallowObjectController` will warn you if you use the deprecated Ember.ObjectController. See [http://emberjs.com/deprecations/v1.x/#toc_objectcontroller] for details.
+`disallowObjectController` will warn you if you use the deprecated `Ember.ObjectController`. See http://emberjs.com/deprecations/v1.x/#toc_objectcontroller for details.
 
-`disallowInstanceInInitializer` will warn you if you are looking up instances within an initializer. See [http://emberjs.com/deprecations/v1.x/#toc_access-to-instances-in-initializers] for details.
+`disallowInstanceInInitializer` will warn you if you are looking up instances within an initializer. See http://emberjs.com/deprecations/v1.x/#toc_access-to-instances-in-initializers for details.
 
 ### Deprecations added in Ember 1.12
 
-`disallowCoreView` will warn you if you use the deprecated Ember.CoreView. See [https://github.com/emberjs/ember.js/pull/10585] for details.
+`disallowCoreView` will warn you if you use the deprecated `Ember.CoreView`. See https://github.com/emberjs/ember.js/pull/10585 for details.
 
-`disallowEmberTryCatch` will warn you if you use the deprecated `Ember.tryCatch` or `Ember.tryCatchFinally` helpers. See [https://github.com/emberjs/ember.js/pull/10667] for details.
+`disallowEmberTryCatch` will warn you if you use the deprecated `Ember.tryCatch` or `Ember.tryCatchFinally` helpers. See https://github.com/emberjs/ember.js/pull/10667 for details.
 
-`disallowEmberRequired` will warn you if you use the deprecated `Ember.required()` helper. See [https://github.com/emberjs/ember.js/pull/10668] for details.
+`disallowEmberRequired` will warn you if you use the deprecated `Ember.required()` helper. See https://github.com/emberjs/ember.js/pull/10668 for details.
 
 ### Deprecations added in Ember 1.13
 
-`disallowAtEachLeafNode` will warn you if you use the deprecated `foo.@each` notation. See [https://github.com/emberjs/ember.js/pull/11994] for details.
+`disallowAtEachLeafNode` will warn you if you use the deprecated `foo.@each` notation. See https://github.com/emberjs/ember.js/pull/11994 for details.
 
 ### Other Ember best practices
 
-`disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See [http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions] for details.
+`disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
 
 # Licence
 
