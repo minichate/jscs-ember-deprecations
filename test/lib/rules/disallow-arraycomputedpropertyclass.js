@@ -7,20 +7,20 @@ describe('lib/rules/disallow-arraycomputedpropertyclass', function () {
 
       it('should report with undefined', function() {
         global.expect(function() {
-          checker.configure({disallowArrayComputedProperty: undefined});
+          checker.configure({disallowArrayComputed: undefined});
         }).to.throws(/requires a true value/i);
       });
 
       it('should report with an object', function() {
         global.expect(function() {
-          checker.configure({disallowArrayComputedProperty: {}});
+          checker.configure({disallowArrayComputed: {}});
         }).to.throws(/requires a true value/i);
       });
 
     });
 
     describe('with true', function() {
-      checker.rules({disallowArrayComputedProperty: true});
+      checker.rules({disallowArrayComputed: true});
 
       checker.cases([
         /* jshint ignore:start */

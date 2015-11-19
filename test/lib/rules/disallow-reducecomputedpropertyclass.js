@@ -7,20 +7,20 @@ describe('lib/rules/disallow-reducecomputedpropertyclass', function () {
 
       it('should report with undefined', function() {
         global.expect(function() {
-          checker.configure({disallowReduceComputedProperty: undefined});
+          checker.configure({disallowReduceComputed: undefined});
         }).to.throws(/requires a true value/i);
       });
 
       it('should report with an object', function() {
         global.expect(function() {
-          checker.configure({disallowReduceComputedProperty: {}});
+          checker.configure({disallowReduceComputed: {}});
         }).to.throws(/requires a true value/i);
       });
 
     });
 
     describe('with true', function() {
-      checker.rules({disallowReduceComputedProperty: true});
+      checker.rules({disallowReduceComputed: true});
 
       checker.cases([
         /* jshint ignore:start */
