@@ -81,6 +81,17 @@ describe('lib/rules/disallow-ateachleafnode', function () {
               })
             };
           }
+        },
+        {
+          it: 'should report deprecated use',
+          errors: 1,
+          code: function() {
+            var a = function fooFroup(key, groupName) {
+              return computed('foo.@each', function() {
+                // ...
+              });
+            }
+          }
         }
         /* jshint ignore:end */
       ]);
