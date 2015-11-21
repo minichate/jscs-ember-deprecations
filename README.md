@@ -67,6 +67,8 @@ This way a codebase can be gradually brought into compliance over time.
 
 `disallowEmberKeys` will warn you if you use the deprecated `Ember.keys()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-keys for details.
 
+`disallowEmberOneway` will warn you if you use the deprecated `Ember.oneWay()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-oneway for details.
+
 ### Other Ember best practices
 
 `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
