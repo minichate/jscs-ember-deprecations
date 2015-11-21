@@ -63,6 +63,8 @@ This way a codebase can be gradually brought into compliance over time.
 
 `disallowReduceComputed` will warn you if you use the deprecated `Ember.ReduceComputedProperty` or `Ember.reduceComputed()`. See https://github.com/emberjs/ember.js/pull/11403 for details.
 
+`disallowEmberCreate` will warn you if you use the deprecated `Ember.create()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-create for details.
+
 ### Other Ember best practices
 
 `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
