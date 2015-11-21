@@ -10,8 +10,8 @@
     "url": "https://github.com/minichate/jscs-ember-deprecations"
   },
   "bugs": {
-    "url" : "https://github.com/minichate/jscs-ember-deprecations/issues",
-    "email" : "minichate@gmail.com"
+    "url": "https://github.com/minichate/jscs-ember-deprecations/issues",
+    "email": "minichate@gmail.com"
   },
   "main": "lib/index",
   "scripts": {
@@ -23,14 +23,14 @@
   },
   "dependencies": {},
   "devDependencies": {
-    "chai": "^3.4.0",
+    "chai": "^3.4.1",
     "chai-subset": "^1.1.0",
     "coveralls": "^2.11.4",
     "istanbul": "^0.4.0",
     "jscs": "^2.1.1",
     "jshint": "^2.7.0",
     "merge": "^1.2.0",
-    "mocha": "^2.2.4",
+    "mocha": "^2.3.4",
     "mocha-lcov-reporter": "^1.0.0"
   },
   "keywords": [
