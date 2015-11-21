@@ -14,4 +14,11 @@ describe('lib/helpers/deprecated-class', function() {
       sut.getErrorString({});
     }).to.throw('Needs to be implemented');
   });
+
+  it('should raise exception for getDeprecatedClass', function() {
+    global.expect(function() {
+      var sut = new DeprecatedClass();
+      sut.getDeprecatedClass();
+    }).to.throw('Needs to be implemented');
+  });
 });
