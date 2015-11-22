@@ -38,6 +38,14 @@ describe('lib/rules/disallow-embertrycatch', function () {
             });
           }
         }, {
+          it: 'should not report Ember.foobar.oneWay()',
+          code: function() {
+            var user = Ember.Object.extend({
+              firstName: null,
+              nickName: Ember.foobar.oneWay('firstName')
+            });
+          }
+        }, {
           it: 'should report deprecated use',
           errors: 1,
           code: function() {

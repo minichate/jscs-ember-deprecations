@@ -1,0 +1,47 @@
+App = Ember.Application.create({});
+
+App.Student = Ember.Object.extend({
+    id: null, 
+    name: null, 
+    tId: null
+});
+    
+App.Teacher = Ember.Object.extend({
+    id: null, 
+    name: null, 
+    students: null
+});
+
+App.TeacherView = Ember.View.extend({
+    templateName: 'teacher-view'
+});
+
+App.StudentView = Ember.View.extend({
+    templateName: 'student-view',
+    emptyView: Ember.View.extend({
+        template: Ember.Handlebars.compile("The collection is empty")
+    })
+});
+
+App.StudentCollection = Ember.CollectionView.extend({
+    content: function() {
+        return App.get('studentsController').filterProperty('tid', this.tid);
+    }.property(),
+    tid: undefined
+});
+
+App.set('teachersController', Ember.ArrayController.create({
+    content: [
+        App.Teacher.create({id:1, name: "mr.katz", students: [2, 3]}),
+        App.Teacher.create({id:2, name: "mr.dale", students: [1]})
+        ]
+}));
+        
+App.set('studentsController', Ember.ArrayController.create({
+    content: [
+        App.Student.create({id:1, name: "yehuda", tid: 2}),
+        App.Student.create({id:2, name: "tom", tid: 1}),
+        App.Student.create({id:3, name: "bob", tid: 2}),
+        App.Student.create({id:4, name: "scott", tid: 2})
+        ]
+}));
