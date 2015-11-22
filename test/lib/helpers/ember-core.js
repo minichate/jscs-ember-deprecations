@@ -67,8 +67,6 @@ describe('lib/helpers/ember-core', function() {
 
     it('should find Ember classes', function() {
       var viewClasses = ember.findEmberClass('View');
-      console.log(viewClasses.length);
-
       assert(3 === viewClasses.length);
 
       // App.TeacherView
@@ -105,11 +103,6 @@ describe('lib/helpers/ember-core', function() {
     it('should not find Ember import statement', function() {
       assert(ember.emberImport() === false);
     });
-
-    it('should not find Ember classes', function() {
-      var viewClasses = ember.findEmberClass('View');
-      assert(0 === viewClasses.length);
-    });
   });
 
   describe('unconventional ember import', function() {
@@ -125,6 +118,11 @@ describe('lib/helpers/ember-core', function() {
 
     it('should find Ember import statement', function() {
       assert(ember.emberImport() === 'Em');
+    });
+
+    it('should not find Ember classes', function() {
+      var viewClasses = ember.findEmberClass('View');
+      assert(0 === viewClasses.length);
     });
   });
 

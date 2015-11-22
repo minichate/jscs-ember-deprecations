@@ -1,1 +1,3 @@
 import Ember from 'nowhere';
+
+Ember.View.extend({});

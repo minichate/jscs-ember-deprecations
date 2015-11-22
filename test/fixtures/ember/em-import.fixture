@@ -1,1 +1,3 @@
 import Em from 'ember';
+
+Ember.View.extend({});
