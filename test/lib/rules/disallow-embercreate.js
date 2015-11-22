@@ -42,20 +42,5 @@ describe('lib/rules/disallow-embertrycatch', function () {
         }
         /* jshint ignore:end */
       ]);
-
-      checker.cases([
-        /* jshint ignore:start */
-        {
-          it: 'should not report different import',
-          code: "import Em from 'ember';\n" +
-                "Ember.create()"
-        }, {
-          it: 'should report same import',
-          code: "import Em from 'ember';\n" +
-                "Em.create()",
-          errors: 1
-        }
-        /* jshint ignore:end */
-      ]);
     });
 });

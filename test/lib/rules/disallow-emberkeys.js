@@ -27,7 +27,7 @@ describe('lib/rules/disallow-embertrycatch', function () {
         {
           it: 'should not report',
           code: function() {
-            Ember.K();
+            Object.keys({});
           }
         }, {
           it: 'should report deprecated use',
@@ -47,21 +47,6 @@ describe('lib/rules/disallow-embertrycatch', function () {
               yellow: 'banana'
             });
           }
-        }
-        /* jshint ignore:end */
-      ]);
-
-      checker.cases([
-        /* jshint ignore:start */
-        {
-          it: 'should not report different import',
-          code: "import Em from 'ember';\n" +
-                "Ember.keys()"
-        }, {
-          it: 'should report same import',
-          code: "import Em from 'ember';\n" +
-                "Em.keys()",
-          errors: 1
         }
         /* jshint ignore:end */
       ]);

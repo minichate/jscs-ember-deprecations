@@ -51,20 +51,5 @@ describe('lib/rules/disallow-arraycomputedpropertyclass', function () {
         }
         /* jshint ignore:end */
       ]);
-
-      checker.cases([
-        /* jshint ignore:start */
-        {
-          it: 'should not report different import',
-          code: "import Em from 'ember';\n" +
-                "Ember.ArrayComputedProperty.create()"
-        }, {
-          it: 'should report same import',
-          code: "import Em from 'ember';\n" +
-                "Em.ArrayComputedProperty.create()",
-          errors: 1
-        }
-        /* jshint ignore:end */
-      ]);
     });
 });

@@ -68,20 +68,5 @@ describe('lib/rules/disallow-objectcontroller', function () {
         }
         /* jshint ignore:end */
       ]);
-
-      checker.cases([
-        /* jshint ignore:start */
-        {
-          it: 'should not report different import',
-          code: "import Em from 'ember';\n" +
-                "Ember.ObjectController.create()"
-        }, {
-          it: 'should report same import',
-          code: "import Em from 'ember';\n" +
-                "Em.ObjectController.create()",
-          errors: 1
-        }
-        /* jshint ignore:end */
-      ]);
     });
 });

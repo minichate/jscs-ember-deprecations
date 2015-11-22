@@ -51,20 +51,5 @@ describe('lib/rules/disallow-reducecomputedpropertyclass', function () {
         }
         /* jshint ignore:end */
       ]);
-
-      checker.cases([
-        /* jshint ignore:start */
-        {
-          it: 'should not report different import',
-          code: "import Em from 'ember';\n" +
-                "Ember.ReduceComputedProperty.create()"
-        }, {
-          it: 'should report same import',
-          code: "import Em from 'ember';\n" +
-                "Em.ReduceComputedProperty.create()",
-          errors: 1
-        }
-        /* jshint ignore:end */
-      ]);
     });
 });
