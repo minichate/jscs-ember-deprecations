@@ -43,6 +43,15 @@ describe('lib/rules/disallow-ateachleafnode', function () {
             };
           }
         }, {
+          it: 'should not report number argument',
+          code: function() {
+            var a = {
+              foo: Ember.computed(4, function() {
+
+              })
+            };
+          }
+        }, {
           it: 'should not report',
           code: function() {
             var a = {
