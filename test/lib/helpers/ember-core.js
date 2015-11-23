@@ -52,6 +52,16 @@ describe('lib/helpers/ember-core', function() {
       assert(23 === viewClasses[2].loc.end.line);
       assert(25 === viewClasses[2].loc.end.column);
     });
+
+    it('should find Ember helper functions', function() {
+      var keys = ember.findEmberFunction('keys', 0);
+      assert(1 === keys.length);
+    });
+
+    it('should not find Ember helper functions if argument length not match', function() {
+      var keys = ember.findEmberFunction('keys', 10);
+      assert(0 === keys.length);
+    });
   });
 
   describe('basic ember application with no ES6 imports', function() {

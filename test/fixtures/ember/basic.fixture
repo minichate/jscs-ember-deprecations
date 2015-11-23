@@ -45,5 +45,10 @@ App.set('studentsController', Ember.ArrayController.create({
         App.Student.create({id:2, name: "tom", tid: 1}),
         App.Student.create({id:3, name: "bob", tid: 2}),
         App.Student.create({id:4, name: "scott", tid: 2})
-        ]
+        ],
+    number: function() {
+        return this.get('content').length
+    }.property()
 }));
+
+App.foo = Ember.keys({});
