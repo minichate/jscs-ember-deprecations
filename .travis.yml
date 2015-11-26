@@ -3,7 +3,7 @@ sudo: false
 
 script:
   - npm run travis
-  - ./integration discourse/jsapp
+  - ./integration.sh discourse/jsapp
 
 node_js:
   - "0.10"
