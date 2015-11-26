@@ -1,0 +1,9 @@
+{
+  "esnext": true,
+  "verbose": true,
+  "fileExtensions": [".js", ".jsx", ".es6"],
+  "additionalRules": [
+    "lib/rules/*.js"
+  ],
+  "disallowPrototypeExtension": true
+}

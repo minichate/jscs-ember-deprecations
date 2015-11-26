@@ -1,7 +1,9 @@
 language: node_js
 sudo: false
 
-script: "npm run travis"
+script:
+  - npm run travis
+  - ./node_modules/jscs/bin/jscs --config .integration_jscsrc discourse/jsapp/
 
 node_js:
   - "0.10"
@@ -13,3 +15,4 @@ matrix:
 
 before_script:
   - ln -s ../ ./node_modules/jscs-ember-deprecations
+  - git clone https://github.com/discourse/discourse.git discourse
