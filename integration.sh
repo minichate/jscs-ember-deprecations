@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OUTPUT=$(./node_modules/jscs/bin/jscs --config .integration_jscsrc $@ | grep "ReferenceError" | wc -l)
+OUTPUT=$(./node_modules/jscs/bin/jscs --config .integration_jscsrc -m -1 $@ | grep "ReferenceError" | wc -l)
 
 if [ "$OUTPUT" -gt 0 ]; then
   exit 1
