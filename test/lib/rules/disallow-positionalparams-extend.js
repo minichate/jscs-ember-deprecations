@@ -28,9 +28,9 @@ describe('lib/rules/disallow-positionalparams-extend', function () {
           it: 'should not report reopened class',
           code: function() {
             var Thing = Ember.Component.extend();
-            //Thing.reopenClass({
-            //  positionalParams: [ 'a', 'b' ]
-            //});
+            Thing.reopenClass({
+              positionalParams: [ 'a', 'b' ]
+            });
           }
         }, {
           it: 'should report deprecated use',
