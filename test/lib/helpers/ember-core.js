@@ -70,6 +70,12 @@ describe('lib/helpers/ember-core', function() {
     it('should find properties in .extend() blocks', function() {
       var properties = ember.findExtendBlocksProperties('students');
       assert(1 === properties.length);
+
+      var property = properties[0];
+      assert('Property' === property.type);
+      assert('students' === property.key.name);
+      assert('Identifier' === property.key.type);
+      assert(null === property.value.value);
     });
   });
 
