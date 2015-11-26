@@ -62,6 +62,15 @@ describe('lib/helpers/ember-core', function() {
       var keys = ember.findEmberFunction('keys', 10);
       assert(0 === keys.length);
     });
+
+    it('should find .extend() blocks', function() {
+      assert(6 === ember.findExtendBlocks().length);
+    });
+
+    it('should find properties in .extend() blocks', function() {
+      var properties = ember.findExtendBlocksProperties('students');
+      assert(1 === properties.length);
+    });
   });
 
   describe('basic ember application with no ES6 imports', function() {
