@@ -112,6 +112,21 @@ describe('lib/helpers/ember-core', function() {
       assert(21 === viewClasses[2].loc.end.line);
       assert(25 === viewClasses[2].loc.end.column);
     });
+
+    it('should find .extend() blocks', function() {
+      assert(6 === ember.findExtendBlocks().length);
+    });
+
+    it('should find properties in .extend() blocks', function() {
+      var properties = ember.findExtendBlocksProperties('students');
+      assert(1 === properties.length);
+
+      var property = properties[0];
+      assert('Property' === property.type);
+      assert('students' === property.key.name);
+      assert('Identifier' === property.key.type);
+      assert(null === property.value.value);
+    });
   });
 
   describe('malformed ember import', function() {
