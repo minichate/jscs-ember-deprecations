@@ -21,5 +21,6 @@
   "disallowBeforeObserver": true,
   "disallowImmediateObserver": true,
   "disallowArrayController": true,
+  "disallowControllerNeeds": true,
   "disallowPrototypeExtension": true
 }
