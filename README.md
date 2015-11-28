@@ -77,6 +77,8 @@ itself. See http://emberjs.com/deprecations/v1.x/#toc_set-code-positionalparams-
 
 `disallowBeforeObserver` will warn you if you use the deprecated `Ember.addBeforeObserver()`, `Ember.removeBeforeObserver()`, or `Ember.beforeObserversFor()` functions. Additionally, it will warn you if you use the deprecated `.observesBefore()` prototype extenion. Note that `.observesBefore()` is also deprecated in [disallowPrototypeExtension](#other-ember-best-practices). See http://emberjs.com/deprecations/v1.x/#toc_beforeobserver for details.
 
+`disallowImmediateObserver` will warn you if you use the deprecated `Ember.immediateObserver` helper. See http://emberjs.com/deprecations/v1.x/#toc_ember-immediateobserver for details.
+
 ### Other Ember best practices
 
 `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
