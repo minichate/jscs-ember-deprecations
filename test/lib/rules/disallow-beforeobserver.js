@@ -1,4 +1,4 @@
-describe('lib/rules/disallow-reducecomputedpropertyclass', function () {
+describe('lib/rules/disallow-beforeobserver', function () {
     var checker = global.checker({
         plugins: ['./lib/index']
     });
