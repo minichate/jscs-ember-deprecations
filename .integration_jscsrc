@@ -18,5 +18,6 @@
   "disallowEmberOneway": true,
   "disallowEmberView": true,
   "disallowPositionalParamsExtend": true,
+  "disallowBeforeObserver": true,
   "disallowPrototypeExtension": true
 }
