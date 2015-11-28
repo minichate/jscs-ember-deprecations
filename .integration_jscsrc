@@ -17,5 +17,6 @@
   "disallowEmberKeys": true,
   "disallowEmberOneway": true,
   "disallowEmberView": true,
+  "disallowPositionalParamsExtend": true,
   "disallowPrototypeExtension": true
 }
