@@ -33,10 +33,11 @@ describe('lib/rules/disallow-positionalparams-extend', function () {
             });
           }
         }, {
-          it: 'should not report needs other value',
+          it: 'should report needs string',
+          errors: 1,
           code: function() {
             Ember.Controller.extend({
-              needs: null,
+              needs: "post",
             });
           }
         }, {
