@@ -20,5 +20,6 @@
   "disallowPositionalParamsExtend": true,
   "disallowBeforeObserver": true,
   "disallowImmediateObserver": true,
+  "disallowArrayController": true,
   "disallowPrototypeExtension": true
 }
