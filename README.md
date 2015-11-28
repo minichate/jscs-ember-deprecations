@@ -75,6 +75,8 @@ This way a codebase can be gradually brought into compliance over time.
 within `.extend()` instead of setting it as a static property on the class
 itself. See http://emberjs.com/deprecations/v1.x/#toc_set-code-positionalparams-code-as-a-static-property-on-the-class for details.
 
+`disallowBeforeObserver` will warn you if you use the deprecated `Ember.addBeforeObserver()`, `Ember.removeBeforeObserver()`, or `Ember.beforeObserversFor()` functions. Additionally, it will warn you if you use the deprecated `.observesBefore()` prototype extenion. Note that `.observesBefore()` is also deprecated in [disallowPrototypeExtension](#other-ember-best-practices). See http://emberjs.com/deprecations/v1.x/#toc_beforeobserver for details.
+
 `disallowImmediateObserver` will warn you if you use the deprecated `Ember.immediateObserver` helper. See http://emberjs.com/deprecations/v1.x/#toc_ember-immediateobserver for details.
 
 ### Other Ember best practices
