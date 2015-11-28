@@ -71,6 +71,10 @@ This way a codebase can be gradually brought into compliance over time.
 
 `disallowEmberView` will warn you if you use the deprecated `Ember.View`, `Ember.LinkView`, `Ember.Select`, `Ember.ContainerView`, or `Ember.CollectionView` classes. See http://emberjs.com/deprecations/v1.x/#toc_ember-view for details.
 
+`disallowPositionalParamsExtend` will warn you if you use `positionalParams`
+within `.extend()` instead of setting it as a static property on the class
+itself. See http://emberjs.com/deprecations/v1.x/#toc_set-code-positionalparams-code-as-a-static-property-on-the-class for details.
+
 ### Other Ember best practices
 
 `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
