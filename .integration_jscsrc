@@ -1,0 +1,21 @@
+{
+  "esnext": true,
+  "verbose": true,
+  "fileExtensions": [".js", ".jsx", ".es6"],
+  "additionalRules": [
+    "lib/rules/*.js"
+  ],
+  "disallowObjectController": true,
+  "disallowInstanceInInitializer": true,
+  "disallowCoreView": true,
+  "disallowEmberTryCatch": true,
+  "disallowEmberRequired": true,
+  "disallowAtEachLeafNode": true,
+  "disallowArrayComputed": true,
+  "disallowReduceComputed": true,
+  "disallowEmberCreate": true,
+  "disallowEmberKeys": true,
+  "disallowEmberOneway": true,
+  "disallowEmberView": true,
+  "disallowPrototypeExtension": true
+}
