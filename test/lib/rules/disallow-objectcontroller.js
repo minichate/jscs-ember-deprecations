@@ -32,12 +32,14 @@ describe('lib/rules/disallow-objectcontroller', function () {
             });
           }
         }, {
-          it: 'should not report',
+          it: 'should report',
+          errors: 1,
           code: function() {
             var foo = Ember.ObjectController;
           }
         }, {
-          it: 'should not report',
+          it: 'should report',
+          errors: 1,
           code: function() {
             Ember.ObjectController.foo();
           }

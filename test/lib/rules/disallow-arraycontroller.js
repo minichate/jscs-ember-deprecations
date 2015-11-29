@@ -32,12 +32,14 @@ describe('lib/rules/disallow-arraycontroller', function () {
             });
           }
         }, {
-          it: 'should not report',
+          it: 'should report',
+          errors: 1,
           code: function() {
             var foo = Ember.ArrayController;
           }
         }, {
-          it: 'should not report',
+          it: 'should report',
+          errors: 1,
           code: function() {
             Ember.ArrayController.foo();
           }

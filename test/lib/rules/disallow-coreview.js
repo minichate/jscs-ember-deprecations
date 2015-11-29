@@ -32,12 +32,14 @@ describe('lib/rules/disallow-coreview', function () {
             });
           }
         }, {
-          it: 'should not report',
+          it: 'should report',
+          errors: 1,
           code: function() {
             var foo = Ember.CoreView;
           }
         }, {
-          it: 'should not report',
+          it: 'should report',
+          errors: 1,
           code: function() {
             Ember.CoreView.foo();
           }
