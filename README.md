@@ -43,49 +43,49 @@ This way a codebase can be gradually brought into compliance over time.
 
 ### Deprecations added in Ember 1.11
 
-`disallowObjectController` will warn you if you use the deprecated `Ember.ObjectController`. See http://emberjs.com/deprecations/v1.x/#toc_objectcontroller for details.
+- `disallowObjectController` will warn you if you use the deprecated `Ember.ObjectController`. See http://emberjs.com/deprecations/v1.x/#toc_objectcontroller for details.
 
-`disallowInstanceInInitializer` will warn you if you are looking up instances within an initializer. See http://emberjs.com/deprecations/v1.x/#toc_access-to-instances-in-initializers for details.
+- `disallowInstanceInInitializer` will warn you if you are looking up instances within an initializer. See http://emberjs.com/deprecations/v1.x/#toc_access-to-instances-in-initializers for details.
 
 ### Deprecations added in Ember 1.12
 
-`disallowCoreView` will warn you if you use the deprecated `Ember.CoreView`. See https://github.com/emberjs/ember.js/pull/10585 for details.
+- `disallowCoreView` will warn you if you use the deprecated `Ember.CoreView`. See https://github.com/emberjs/ember.js/pull/10585 for details.
 
-`disallowEmberTryCatch` will warn you if you use the deprecated `Ember.tryCatch` or `Ember.tryCatchFinally` helpers. See https://github.com/emberjs/ember.js/pull/10667 for details.
+- `disallowEmberTryCatch` will warn you if you use the deprecated `Ember.tryCatch` or `Ember.tryCatchFinally` helpers. See https://github.com/emberjs/ember.js/pull/10667 for details.
 
-`disallowEmberRequired` will warn you if you use the deprecated `Ember.required()` helper. See https://github.com/emberjs/ember.js/pull/10668 for details.
+- `disallowEmberRequired` will warn you if you use the deprecated `Ember.required()` helper. See https://github.com/emberjs/ember.js/pull/10668 for details.
 
 ### Deprecations added in Ember 1.13
 
-`disallowAtEachLeafNode` will warn you if you use the deprecated `foo.@each` notation. See https://github.com/emberjs/ember.js/pull/11994 for details.
+- `disallowAtEachLeafNode` will warn you if you use the deprecated `foo.@each` notation. See https://github.com/emberjs/ember.js/pull/11994 for details.
 
-`disallowArrayComputed` will warn you if you use the deprecated `Ember.ArrayComputedProperty` or `Ember.arrayComputed()`. See https://github.com/emberjs/ember.js/pull/11403 for details.
+- `disallowArrayComputed` will warn you if you use the deprecated `Ember.ArrayComputedProperty` or `Ember.arrayComputed()`. See https://github.com/emberjs/ember.js/pull/11403 for details.
 
-`disallowReduceComputed` will warn you if you use the deprecated `Ember.ReduceComputedProperty` or `Ember.reduceComputed()`. See https://github.com/emberjs/ember.js/pull/11403 for details.
+- `disallowReduceComputed` will warn you if you use the deprecated `Ember.ReduceComputedProperty` or `Ember.reduceComputed()`. See https://github.com/emberjs/ember.js/pull/11403 for details.
 
-`disallowEmberCreate` will warn you if you use the deprecated `Ember.create()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-create for details.
+- `disallowEmberCreate` will warn you if you use the deprecated `Ember.create()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-create for details.
 
-`disallowEmberKeys` will warn you if you use the deprecated `Ember.keys()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-keys for details.
+- `disallowEmberKeys` will warn you if you use the deprecated `Ember.keys()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-keys for details.
 
-`disallowEmberOneway` will warn you if you use the deprecated `Ember.oneWay()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-oneway for details.
+- `disallowEmberOneway` will warn you if you use the deprecated `Ember.oneWay()` function. See http://emberjs.com/deprecations/v1.x/#toc_ember-oneway for details.
 
-`disallowEmberView` will warn you if you use the deprecated `Ember.View`, `Ember.LinkView`, `Ember.Select`, `Ember.ContainerView`, or `Ember.CollectionView` classes. See http://emberjs.com/deprecations/v1.x/#toc_ember-view for details.
+- `disallowEmberView` will warn you if you use the deprecated `Ember.View`, `Ember.LinkView`, `Ember.Select`, `Ember.ContainerView`, or `Ember.CollectionView` classes. See http://emberjs.com/deprecations/v1.x/#toc_ember-view for details.
 
-`disallowPositionalParamsExtend` will warn you if you use `positionalParams`
+- `disallowPositionalParamsExtend` will warn you if you use `positionalParams`
 within `.extend()` instead of setting it as a static property on the class
 itself. See http://emberjs.com/deprecations/v1.x/#toc_set-code-positionalparams-code-as-a-static-property-on-the-class for details.
 
-`disallowBeforeObserver` will warn you if you use the deprecated `Ember.addBeforeObserver()`, `Ember.removeBeforeObserver()`, or `Ember.beforeObserversFor()` functions. Additionally, it will warn you if you use the deprecated `.observesBefore()` prototype extenion. Note that `.observesBefore()` is also deprecated in [disallowPrototypeExtension](#other-ember-best-practices). See http://emberjs.com/deprecations/v1.x/#toc_beforeobserver for details.
+- `disallowBeforeObserver` will warn you if you use the deprecated `Ember.addBeforeObserver()`, `Ember.removeBeforeObserver()`, or `Ember.beforeObserversFor()` functions. Additionally, it will warn you if you use the deprecated `.observesBefore()` prototype extenion. Note that `.observesBefore()` is also deprecated in [disallowPrototypeExtension](#other-ember-best-practices). See http://emberjs.com/deprecations/v1.x/#toc_beforeobserver for details.
 
-`disallowImmediateObserver` will warn you if you use the deprecated `Ember.immediateObserver` helper. See http://emberjs.com/deprecations/v1.x/#toc_ember-immediateobserver for details.
+- `disallowImmediateObserver` will warn you if you use the deprecated `Ember.immediateObserver` helper. See http://emberjs.com/deprecations/v1.x/#toc_ember-immediateobserver for details.
 
-`disallowArrayController` will warn you if you use the deprecated `Ember.ArrayController`. See http://emberjs.com/deprecations/v1.x/#toc_arraycontroller for details.
+- `disallowArrayController` will warn you if you use the deprecated `Ember.ArrayController`. See http://emberjs.com/deprecations/v1.x/#toc_arraycontroller for details.
 
-`disallowControllerNeeds` will warn you if you're doing dependency injection via the `needs` property on a controller. See http://emberjs.com/deprecations/v1.x/#toc_controller-needs for details.
+- `disallowControllerNeeds` will warn you if you're doing dependency injection via the `needs` property on a controller. See http://emberjs.com/deprecations/v1.x/#toc_controller-needs for details.
 
 ### Other Ember best practices
 
-`disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
+- `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
 
 # Licence
 
