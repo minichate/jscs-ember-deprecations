@@ -83,6 +83,8 @@ itself. See http://emberjs.com/deprecations/v1.x/#toc_set-code-positionalparams-
 
 - `disallowControllerNeeds` will warn you if you're doing dependency injection via the `needs` property on a controller. See http://emberjs.com/deprecations/v1.x/#toc_controller-needs for details.
 
+- `disallowFreezableMixin` will warn you if you use the deprecated `Ember.Freezable` mixin. See http://emberjs.com/deprecations/v1.x/#toc_ember-freezeable for details.
+
 ### Other Ember best practices
 
 - `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.

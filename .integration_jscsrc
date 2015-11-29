@@ -22,5 +22,6 @@
   "disallowImmediateObserver": true,
   "disallowArrayController": true,
   "disallowControllerNeeds": true,
+  "disallowFreezableMixin": true,
   "disallowPrototypeExtension": true
 }
