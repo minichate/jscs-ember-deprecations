@@ -23,5 +23,6 @@
   "disallowArrayController": true,
   "disallowControllerNeeds": true,
   "disallowFreezableMixin": true,
+  "disallowObserverArgumentOrdering", true,
   "disallowPrototypeExtension": true
 }
