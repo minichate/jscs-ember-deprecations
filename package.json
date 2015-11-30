@@ -1,6 +1,6 @@
 {
   "name": "jscs-ember-deprecations",
-  "version": "0.0.17",
+  "version": "0.0.18",
   "description": "Ember deprecation warnings for JSCS",
   "homepage": "https://github.com/minichate/jscs-ember-deprecations",
   "author": "Christopher Troup",
