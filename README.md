@@ -87,6 +87,8 @@ itself. See http://emberjs.com/deprecations/v1.x/#toc_set-code-positionalparams-
 
 - `disallowObserverArgumentOrdering` requires that `Ember.observer()` takes callable argument as the final argument. See http://emberjs.com/deprecations/v1.x/#toc_reversed-ember-observer-arguments for details.
 
+- `disallowCreateWithMixins` will warn you if you use the deprecated `Ember.Object.createWithMixins` method. See http://emberjs.com/deprecations/v1.x/#toc_ember-createwithmixins for details.
+
 ### Other Ember best practices
 
 - `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.

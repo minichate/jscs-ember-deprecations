@@ -24,5 +24,6 @@
   "disallowControllerNeeds": true,
   "disallowFreezableMixin": true,
   "disallowObserverArgumentOrdering": true,
+  "disallowCreateWithMixins": true,
   "disallowPrototypeExtension": true
 }
