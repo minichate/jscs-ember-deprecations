@@ -25,5 +25,6 @@
   "disallowFreezableMixin": true,
   "disallowObserverArgumentOrdering": true,
   "disallowCreateWithMixins": true,
+  "disallowComputedAny": true,
   "disallowPrototypeExtension": true
 }
