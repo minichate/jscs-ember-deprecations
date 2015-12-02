@@ -32,6 +32,20 @@ describe('lib/rules/disallow-computedany', function () {
             });
           }
         }, {
+          it: 'should not report Foo.any()',
+          code: function() {
+            var Hamster = Ember.Object.extend({
+              hasClothes: Foo.any('hat', 'shirt')
+            });
+          }
+        }, {
+          it: 'should not report Ember.notathing.any()',
+          code: function() {
+            var Hamster = Ember.Object.extend({
+              hasClothes: Ember.notathing.any('hat', 'shirt')
+            });
+          }
+        }, {
           it: 'should report Ember.computed.any()',
           errors: 1,
           code: function() {
