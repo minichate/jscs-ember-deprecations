@@ -32,6 +32,30 @@ describe('lib/rules/disallow-handlebarshelpers', function () {
             });
           }
         }, {
+          it: 'should not report Ember.Foobars.registerHelper()',
+          code: function() {
+            Ember.Foobars.registerHelper('foo-bar', function(firstArg, secondArg, options) {
+              // helper code
+            });
+          }
+        }, {
+          it: 'should not report bare registerHelper()',
+          code: function() {
+            registerHelper('foo-bar');
+          }
+        }, {
+          it: 'should not report bare makeBoundHelper()',
+          code: function() {
+            makeBoundHelper('foo-bar');
+          }
+        }, {
+          it: 'should not report Ember.Foobars.makeBoundHelper()',
+          code: function() {
+            Ember.Foobars.makeBoundHelper(function(firstArg, secondArg, options) {
+              // helper code
+            });
+          }
+        }, {
           it: 'should report Ember.Handlebars.registerHelper()',
           errors: 1,
           code: function() {
@@ -40,7 +64,7 @@ describe('lib/rules/disallow-handlebarshelpers', function () {
             });
           }
         }, {
-          it: 'should report  Ember.HTMLBars.makeBoundHelper()',
+          it: 'should report Ember.HTMLBars.makeBoundHelper()',
           errors: 1,
           code: function() {
             Ember.HTMLBars.makeBoundHelper(function(firstArg, secondArg, options) {
