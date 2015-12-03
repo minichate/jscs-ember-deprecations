@@ -26,5 +26,6 @@
   "disallowObserverArgumentOrdering": true,
   "disallowCreateWithMixins": true,
   "disallowComputedAny": true,
+  "disallowHandlebarsHelpers": true,
   "disallowPrototypeExtension": true
 }

@@ -91,6 +91,8 @@ itself. See http://emberjs.com/deprecations/v1.x/#toc_set-code-positionalparams-
 
 - `disallowComputedAny` will warn you if you use the deprecated `Ember.computed.any()` helper. See http://emberjs.com/deprecations/v1.x/#toc_ember-computed-any for details.
 
+- `disallowHandlebarsHelpers` will warn you if you use the deprecated `Ember.HTMLBars.makeBoundHelper()` or `Ember.Handlebars.registerHelper()` helpers. See http://emberjs.com/deprecations/v1.x/#toc_handlebars-htmlbars-helpers for details.
+
 ### Other Ember best practices
 
 - `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
