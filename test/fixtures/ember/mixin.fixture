@@ -1,0 +1,4 @@
+import Bar from 'app/routes/mixins/bar';
+
+export default Foo.extend(Bar);
+	

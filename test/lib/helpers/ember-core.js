@@ -181,4 +181,21 @@ describe('lib/helpers/ember-core', function() {
       assert(ember.emberImport() === false);
     });
   });
+
+  describe('ember mixin', function() {
+    beforeEach(function() {
+      var fixture = fixtureLoader.loadString(BASE_PATH, 'mixin.fixture');
+      var file = new JsFile({
+        source: fixture,
+        filename: 'mixin.fixture',
+        esprima: esprima
+      });
+      ember = new EmberCore(file);
+    });
+
+    it('should not find nonexistant properties in .extend() blocks', function() {
+      var properties = ember.findExtendBlocksProperties('students');
+      assert(0 === properties.length);
+    });
+  });
 });
