@@ -1,3 +1,5 @@
+// jshint undef:false
+
 var EmberCore = require('../../../lib/helpers/ember-core');
 var JsFile = require('jscs/lib/js-file');
 var createFixtureLoader = require('fixture-loader');
@@ -5,7 +7,7 @@ var esprima = require('esprima');
 var assert = require('assert');
 
 describe('lib/helpers/ember-core', function() {
-  var checker = global.checker({
+  global.checker({
     plugins: ['./lib/index']
   });
 
