@@ -1,3 +1,5 @@
+var expect = require('chai').expect;
+
 describe('lib/rules/disallow-embertrycatch', function () {
     var checker = global.checker({
         plugins: ['./lib/index']
@@ -50,5 +52,10 @@ describe('lib/rules/disallow-embertrycatch', function () {
         }
         /* jshint ignore:end */
       ]);
+
+      it('fixed to Object.keys()', function() {
+        var result = checker.fixString("Ember.keys({})");
+        expect(result.output).to.equal("Object.keys({})");
+      });
     });
 });
