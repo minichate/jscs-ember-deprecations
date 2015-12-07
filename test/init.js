@@ -52,6 +52,7 @@ function fnBody(func) {
  * @returns {{rules: function(Object), configure: function(Object),
  *   cases: function(TestCase[]), check: function(string)}}
  */
+//jshint unused:false
 function rulesChecker(opts) {
   var checker;
 

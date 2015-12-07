@@ -36,7 +36,7 @@ describe('lib/rules/disallow-embertrycatch', function () {
             Ember.keys();
           },
           errors: [{
-            column: 0, line: 1, filename: 'input', rule: 'disallowEmberKeys', fixed: undefined,
+            column: 6, line: 1, filename: 'input', rule: 'disallowEmberKeys', fixed: undefined,
             message: 'Ember.keys is deprecated in Ember 1.13'
           }]
         }, {
