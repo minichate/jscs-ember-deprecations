@@ -26,6 +26,7 @@ describe('lib/rules/disallow-initializerarity', function () {
         /* jshint ignore:start */
         {
           it: 'should not report identifier initializer',
+          filename: 'app/initializer/foo.js',
           code: function() {
             var initialize = function(application) {
               application.inject('route', 'service:session');
@@ -38,6 +39,7 @@ describe('lib/rules/disallow-initializerarity', function () {
           }
         }, {
           it: 'should not report anonymous initializer',
+          filename: 'app/initializer/foo.js',
           code: function() {
             return {
               name: 'inject-session',
@@ -47,7 +49,19 @@ describe('lib/rules/disallow-initializerarity', function () {
             }
           }
         }, {
+          it: 'should not report deprecated initializer in non-initializer path',
+          filename: 'app/controller/foo.js',
+          code: function() {
+            return {
+              name: 'inject-session',
+              initialize: function(application, thisWouldNormallyBeBad) {
+                application.inject('route', 'service:session');
+              }
+            }
+          }
+        }, {
           it: 'should report deprecated use identifier initializer',
+          filename: 'app/initializer/foo.js',
           errors: 1,
           code: function() {
             var initialize = function(container, application) {
@@ -61,6 +75,7 @@ describe('lib/rules/disallow-initializerarity', function () {
           }
         }, {
           it: 'should report deprecated use anonymous initializer',
+          filename: 'app/initializer/foo.js',
           errors: 1,
           code: function() {
             return {
