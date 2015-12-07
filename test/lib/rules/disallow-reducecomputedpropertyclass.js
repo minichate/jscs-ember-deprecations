@@ -8,13 +8,13 @@ describe('lib/rules/disallow-reducecomputedpropertyclass', function () {
       it('should report with undefined', function() {
         global.expect(function() {
           checker.configure({disallowReduceComputed: undefined});
-        }).to.throws(/requires a true value/i);
+        }).to.throws(/requires a boolean value/i);
       });
 
       it('should report with an object', function() {
         global.expect(function() {
           checker.configure({disallowReduceComputed: {}});
-        }).to.throws(/requires a true value/i);
+        }).to.throws(/requires a boolean value/i);
       });
 
     });

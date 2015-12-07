@@ -8,13 +8,13 @@ describe('lib/rules/disallow-createwithmixins', function () {
       it('should report with undefined', function() {
         global.expect(function() {
           checker.configure({disallowCreateWithMixins: undefined});
-        }).to.throws(/requires a true value/i);
+        }).to.throws(/requires a boolean value/i);
       });
 
       it('should report with an object', function() {
         global.expect(function() {
           checker.configure({disallowCreateWithMixins: {}});
-        }).to.throws(/requires a true value/i);
+        }).to.throws(/requires a boolean value/i);
       });
 
     });

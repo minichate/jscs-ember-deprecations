@@ -8,13 +8,13 @@ describe('lib/rules/disallow-embertrycatch', function () {
       it('should report with undefined', function() {
         global.expect(function() {
           checker.configure({disallowEmberCreate: undefined});
-        }).to.throws(/requires a true value/i);
+        }).to.throws(/requires a boolean value/i);
       });
 
       it('should report with an object', function() {
         global.expect(function() {
           checker.configure({disallowEmberCreate: {}});
-        }).to.throws(/requires a true value/i);
+        }).to.throws(/requires a boolean value/i);
       });
 
     });

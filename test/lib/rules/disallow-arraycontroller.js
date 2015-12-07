@@ -8,13 +8,13 @@ describe('lib/rules/disallow-arraycontroller', function () {
       it('should report with undefined', function() {
         global.expect(function() {
           checker.configure({disallowArrayController: undefined});
-        }).to.throws(/requires a true value/i);
+        }).to.throws(/requires a boolean value/i);
       });
 
       it('should report with an object', function() {
         global.expect(function() {
           checker.configure({disallowArrayController: {}});
-        }).to.throws(/requires a true value/i);
+        }).to.throws(/requires a boolean value/i);
       });
 
     });
