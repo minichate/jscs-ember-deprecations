@@ -133,6 +133,10 @@ function rulesChecker(opts) {
      */
     check: function(str) {
       return checker.checkString(str);
+    },
+
+    fixString: function(str) {
+      return checker.fixString(str);
     }
   };
 }
