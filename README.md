@@ -101,6 +101,8 @@ None. Ember 2.0 removed support for the above deprecations.
 
 - `disallowInitializerArity` will warn you if you have more than 1 argument to an initializer. See http://emberjs.com/deprecations/v2.x/#toc_initializer-arity for details.
 
+- `disallowPrivateRegistryProperty` will warn you if you use one of the private `app.registry.*` deprecations. See http://emberjs.com/deprecations/v2.x/#toc_ember-application-registry-ember-applicationinstance-registry for details.
+
 ### Other Ember best practices
 
 - `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
