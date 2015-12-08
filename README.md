@@ -26,6 +26,8 @@ You'll also need to tell JSCS to load the plugin. Modify your `.jscsrc` file to 
 // ...
 ```
 
+If you invoke JSCS with `--fix` (see http://jscs.info/overview#cli) some deprecation errors can be fixed automatically.
+
 See [Supported deprecations](#supported-deprecations) for valid keys
 
 ## Why
