@@ -101,7 +101,8 @@ function rulesChecker(opts) {
           }
 
           var body = test.code.call ? fnBody(test.code) : test.code;
-          var checked = checker.checkString(body);
+          var filename = test.filename ? test.filename : 'input';
+          var checked = checker.checkString(body, filename);
           var errors = checked.getErrorList();
           if (errors.length && errors[0].rule === 'parseError') {
             console.error(errors[0]);

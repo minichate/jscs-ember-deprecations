@@ -27,5 +27,6 @@
   "disallowCreateWithMixins": true,
   "disallowComputedAny": true,
   "disallowHandlebarsHelpers": true,
+  "disallowInitializerArity": true,
   "disallowPrototypeExtension": true
 }

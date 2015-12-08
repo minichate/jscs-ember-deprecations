@@ -97,6 +97,10 @@ itself. See http://emberjs.com/deprecations/v1.x/#toc_set-code-positionalparams-
 
 None. Ember 2.0 removed support for the above deprecations.
 
+### Deprecations added in Ember 2.1
+
+- `disallowInitializerArity` will warn you if you have more than 1 argument to an initializer. See http://emberjs.com/deprecations/v2.x/#toc_initializer-arity for details.
+
 ### Other Ember best practices
 
 - `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
