@@ -1,3 +1,5 @@
+var expect = require('chai').expect;
+
 describe('lib/rules/disallow-privateregistryproperty', function () {
     var checker = global.checker({
         plugins: ['./lib/index']
@@ -58,5 +60,10 @@ describe('lib/rules/disallow-privateregistryproperty', function () {
         }
         /* jshint ignore:end */
       ]);
+
+      it('fixed registry resolver', function() {
+        var result = checker.fixString("app.registry.resolve(resolverName)");
+        expect(result.output).to.equal("app.resolveRegistration(resolverName)");
+      });
     });
 });
