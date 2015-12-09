@@ -28,5 +28,6 @@
   "disallowComputedAny": true,
   "disallowHandlebarsHelpers": true,
   "disallowInitializerArity": true,
+  "disallowPrivateRegistryProperty": true,
   "disallowPrototypeExtension": true
 }
