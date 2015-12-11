@@ -111,4 +111,4 @@ None. Ember 2.0 removed support for the above deprecations.
 
 # Licence
 
-This library is lovingly brought to you by @minichate. It is released under the MIT license.
+This library is lovingly brought to you by [@minichate](https://twitter.com/minichate). It is released under the MIT license.
