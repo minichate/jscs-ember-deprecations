@@ -1,6 +1,6 @@
 #!/bin/bash
 
-OUTPUT=$(./node_modules/jscs/bin/jscs --config .integration_jscsrc -m -1 $@ | grep "ReferenceError" | wc -l)
+OUTPUT=$(./node_modules/jscs/bin/jscs --config .integration_jscsrc -m -1 $@ | grep "internalError" | wc -l)
 
 echo "${OUTPUT} deprecation warnings found"
 
