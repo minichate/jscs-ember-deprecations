@@ -29,5 +29,6 @@
   "disallowHandlebarsHelpers": true,
   "disallowInitializerArity": true,
   "disallowPrivateRegistryProperty": true,
+  "disallowAppInstanceContainer": true,
   "disallowPrototypeExtension": true
 }
