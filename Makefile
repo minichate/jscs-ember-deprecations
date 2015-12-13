@@ -1,5 +1,10 @@
 REMOTE=origin
 
+.PHONY: test
+.PHONY: coverage
+
+.DEFAULT_GOAL := test
+
 # Utility target for checking required parameters
 guard-%:
 	@if [ "$($*)" = '' ]; then \
@@ -20,3 +25,9 @@ release: guard-VERSION
 	git push $(REMOTE) --tags
 	git push $(REMOTE) master
 	npm publish
+
+test:
+	npm test
+
+coverage:
+	npm run coverage
