@@ -5,6 +5,10 @@ script:
   - npm run travis
   - ./integration.sh $APP_PATH
 
+cache:
+  directories:
+    - node_modules
+
 node_js:
   - "0.10"
   - "0.12"
