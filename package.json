@@ -18,7 +18,7 @@
     "lint": "jshint lib test && jscs lib test",
     "test": "npm run lint && mocha",
     "coverage": "istanbul cover _mocha && cat ./coverage/lcov.info",
-    "coveralls": "istanbul cover _mocha && cat ./coverage/lcov.info | coveralls",
+    "coveralls": "npm run coverage | coveralls",
     "travis": "npm run test && npm run coveralls"
   },
   "dependencies": {},
