@@ -24,5 +24,4 @@ env:
     - INTEGRATION_REPO="https://github.com/offirgolan/ember-cp-validations.git" APP_PATH="ember-cp-validations/app"
 
 before_script:
-  - ln -s ../ ./node_modules/jscs-ember-deprecations
   - git clone $INTEGRATION_REPO
