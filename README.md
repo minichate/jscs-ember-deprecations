@@ -43,6 +43,26 @@ This way a codebase can be gradually brought into compliance over time.
 
 ## Supported deprecations
 
+If you'd like to enable every deprecation introduced in Ember 1.11, simply include the option:
+
+```json
+"disallowEmber1.11": true
+```
+
+For Ember 1.12:
+
+```json
+"disallowEmber1.12": true
+```
+
+and for Ember 1.13:
+
+```json
+"disallowEmber1.13": true
+```
+
+Otherwise, if you'd like to enable the deprecations individually, the following options will allow you to opt-in deprecation-by-deprecation:
+
 ### Deprecations added in Ember 1.11
 
 - `disallowObjectController` will warn you if you use the deprecated `Ember.ObjectController`. See http://emberjs.com/deprecations/v1.x/#toc_objectcontroller for details.
