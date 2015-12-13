@@ -107,6 +107,8 @@ None. Ember 2.0 removed support for the above deprecations.
 
 - `disallowAppInstanceContainer` will warn you if you use the private `app.container.lookup()` depreprecation in an initializer. See http://emberjs.com/deprecations/v2.x/#toc_ember-applicationinstance-container for details.
 
+- `disallowDebugMissingArguments` will warn you if you use one of the `Ember.warn()`, `Ember.deprecate()`, `Ember.deprecateFunc()` or `Ember.computed.deprecatingAlias()` function without passing in an options object that at a minimum contains an `id` property. See http://emberjs.com/deprecations/v2.x/#toc_ember-debug-function-options for details.
+
 ### Other Ember best practices
 
 - `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.

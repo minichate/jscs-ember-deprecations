@@ -30,5 +30,6 @@
   "disallowInitializerArity": true,
   "disallowPrivateRegistryProperty": true,
   "disallowAppInstanceContainer": true,
+  "disallowDebugMissingArguments": true,
   "disallowPrototypeExtension": true
 }
