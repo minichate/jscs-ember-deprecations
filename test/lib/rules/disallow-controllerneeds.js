@@ -1,4 +1,4 @@
-describe('lib/rules/disallow-positionalparams-extend', function () {
+describe('lib/rules/disallow-controllerneeds', function () {
     var checker = global.checker({
         plugins: ['./lib/index']
     });
