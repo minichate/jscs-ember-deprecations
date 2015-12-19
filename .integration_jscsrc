@@ -31,5 +31,6 @@
   "disallowPrivateRegistryProperty": true,
   "disallowAppInstanceContainer": true,
   "disallowDebugMissingArguments": true,
+  "disallowDefaultLayout": true,
   "disallowPrototypeExtension": true
 }
