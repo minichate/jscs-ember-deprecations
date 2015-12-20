@@ -1,4 +1,4 @@
-describe('lib/rules/disallow-embertrycatch', function () {
+describe('lib/rules/disallow-emberoneway', function () {
     var checker = global.checker({
         plugins: ['./lib/index']
     });
