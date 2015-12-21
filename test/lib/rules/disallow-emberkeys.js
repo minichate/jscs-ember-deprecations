@@ -1,6 +1,6 @@
 var expect = require('chai').expect;
 
-describe('lib/rules/disallow-embertrycatch', function () {
+describe('lib/rules/disallow-emberkeys', function () {
     var checker = global.checker({
         plugins: ['./lib/index']
     });
