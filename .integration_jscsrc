@@ -32,5 +32,6 @@
   "disallowAppInstanceContainer": true,
   "disallowDebugMissingArguments": true,
   "disallowDefaultLayout": true,
+  "disallowCurrentState": true,
   "disallowPrototypeExtension": true
 }

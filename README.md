@@ -111,6 +111,8 @@ None. Ember 2.0 removed support for the above deprecations.
 
 - `disallowDefaultLayout` will warn you if you use the `defaultLayout` property inside a Component. See http://emberjs.com/deprecations/v2.x/#toc_ember-component-defaultlayout for details.
 
+- `disallowCurrentState` will warn you if you use the private `currentState` or `_currentState` property inside a Component. See http://emberjs.com/deprecations/v2.x/#toc_ember-component-currentstate for details.
+
 ### Other Ember best practices
 
 - `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
