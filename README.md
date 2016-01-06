@@ -57,6 +57,8 @@ This way a codebase can be gradually brought into compliance over time.
 
 - `disallowEmberRequired` will warn you if you use the deprecated `Ember.required()` helper. See https://github.com/emberjs/ember.js/pull/10668 for details.
 
+- `disallowDualGetterSetter` will warn you if you use a dual setter/getter function argument to `Ember.computed()`. See http://emberjs.com/deprecations/v1.x/#toc_computed-properties-with-a-shared-getter-and-setter for details.
+
 ### Deprecations added in Ember 1.13
 
 - `disallowAtEachLeafNode` will warn you if you use the deprecated `foo.@each` notation. See https://github.com/emberjs/ember.js/pull/11994 for details.
