@@ -13,6 +13,7 @@
   "disallowAtEachLeafNode": true,
   "disallowArrayComputed": true,
   "disallowReduceComputed": true,
+  "disallowDualGetterSetter": true,
   "disallowEmberCreate": true,
   "disallowEmberKeys": true,
   "disallowEmberOneway": true,
