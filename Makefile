@@ -2,6 +2,7 @@ REMOTE=origin
 
 .PHONY: test
 .PHONY: coverage
+.PHONY: release
 
 .DEFAULT_GOAL := test
 
