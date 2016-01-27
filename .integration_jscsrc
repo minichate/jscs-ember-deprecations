@@ -34,5 +34,6 @@
   "disallowDebugMissingArguments": true,
   "disallowDefaultLayout": true,
   "disallowCurrentState": true,
+  "disallowInjectedContainerAccess": true,
   "disallowPrototypeExtension": true
 }
