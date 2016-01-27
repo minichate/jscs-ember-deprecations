@@ -119,6 +119,10 @@ None. Ember 2.0 removed support for the above deprecations.
 
 - `disallowPrototypeExtension` will warn you if you are using `.property()`, `.observes()` or `observesBefore()`. See http://guides.emberjs.com/v1.10.0/configuring-ember/disabling-prototype-extensions/#toc_functions for details.
 
-# Licence
+### Deprecations added in Ember 2.3
+
+- `disallowInjectedContainerAccess` will warn you if you are using the injected container (`this.container`). See http://emberjs.com/deprecations/v2.x/#toc_injected-container-access for details.
+
+# License
 
 This library is lovingly brought to you by [@minichate](https://twitter.com/minichate). It is released under the MIT license.
