@@ -45,8 +45,8 @@ describe('lib/rules/disallow-embertrycatch', function () {
             Ember.tryCatchFinally(a, b, c);
           },
           errors: [{
-            column: 0, line: 5, filename: 'input', rule: 'disallowEmberTryCatch', fixed: undefined,
-            message: 'Ember.tryCatchFinally is deprecated in Ember 1.12'
+            column: 15, line: 5, filename: 'input', rule: 'disallowEmberTryCatch', fixed: undefined,
+            message: 'disallowEmberTryCatch: Ember.tryCatchFinally is deprecated in Ember 1.12'
           }]
         }, {
           it: 'should report deprecated use',
@@ -58,8 +58,8 @@ describe('lib/rules/disallow-embertrycatch', function () {
             Ember.tryFinally(a, b);
           },
           errors: [{
-            column: 0, line: 4, filename: 'input', rule: 'disallowEmberTryCatch', fixed: undefined,
-            message: 'Ember.tryFinally is deprecated in Ember 1.12'
+            column: 11, line: 4, filename: 'input', rule: 'disallowEmberTryCatch', fixed: undefined,
+            message: 'disallowEmberTryCatch: Ember.tryFinally is deprecated in Ember 1.12'
           }]
         }
         /* jshint ignore:end */

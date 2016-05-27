@@ -36,8 +36,8 @@ describe('lib/rules/disallow-embercreate', function () {
             Ember.create();
           },
           errors: [{
-            column: 0, line: 1, filename: 'input', rule: 'disallowEmberCreate', fixed: undefined,
-            message: 'Ember.create is deprecated in Ember 1.13'
+            column: 7, line: 1, filename: 'input', rule: 'disallowEmberCreate', fixed: undefined,
+            message: 'disallowEmberCreate: Ember.create is deprecated in Ember 1.13'
           }]
         }
         /* jshint ignore:end */

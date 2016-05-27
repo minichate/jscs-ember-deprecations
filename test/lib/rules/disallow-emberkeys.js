@@ -38,8 +38,8 @@ describe('lib/rules/disallow-emberkeys', function () {
             Ember.keys();
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowEmberKeys', fixed: undefined,
-            message: 'Ember.keys is deprecated in Ember 1.13'
+            column: 0, line: 1, filename: 'input', rule: 'disallowEmberKeys', fixed: undefined,
+            message: 'disallowEmberKeys: Ember.keys is deprecated in Ember 1.13'
           }]
         }, {
           it: 'should report deprecated use',

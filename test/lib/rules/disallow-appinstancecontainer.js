@@ -27,84 +27,84 @@ describe('lib/rules/disallow-appinstancecontainer', function () {
         {
           it: 'should not report appinstance.lookup',
           filename: 'app/initializer/foo.js',
-          code: function() {
-            var initialize = function(appInstance) {
-              var store = appInstance.lookup('service:store');
-
-              store.pushPayload('<payload here>');
-            }
-
-            return {
-              name: 'preload-store',
-              initialize: initialize
-            }
-          }
+          code: [
+            "var initialize = function(appInstance) {",
+            "  var store = appInstance.lookup('service:store');",
+            "",
+            "  store.pushPayload('<payload here>');",
+            "}",
+            "",
+            "export default {",
+            "  name: 'preload-store',",
+            "  initialize: initialize",
+            "}"
+          ].join('\n')
         }, {
           it: 'should not report appinstance.container in non-initializer path',
           filename: 'app/bar/foo.js',
-          code: function() {
-            var initialize = function(appInstance) {
-              var store = appInstance.container.lookup('service:store');
-
-              store.pushPayload('<payload here>');
-            }
-
-            return {
-              name: 'preload-store',
-              initialize: initialize
-            }
-          }
+          code: [
+            "var initialize = function(appInstance) {",
+            "  var store = appInstance.container.lookup('service:store');",
+            "",
+            "  store.pushPayload('<payload here>');",
+            "}",
+            "",
+            "export default {",
+            "  name: 'preload-store',",
+            "  initialize: initialize",
+            "}"
+          ].join('\n')
         }, {
           it: 'should not report empty params',
           filename: 'app/initializer/foo.js',
-          code: function() {
-            var initialize = function() {
-            }
-
-            return {
-              name: 'preload-store',
-              initialize: initialize
-            }
-          }
+          code: [
+            "var initialize = function() {",
+            "}",
+            "",
+            "export default {",
+            "  name: 'preload-store',",
+            "  initialize: initialize",
+            "}"
+          ].join('\n')
         }, {
           it: 'should not report anonymous initializer',
           filename: 'app/initializer/foo.js',
-          code: function() {
-            return {
-              name: 'inject-session',
-              initialize: function(application) {
-                application.lookup('service:session');
-              }
-            }
-          }
+          code: [
+            "export default {",
+            "  name: 'inject-session',",
+            "  initialize: function(application) {",
+            "    application.lookup('service:session');",
+            "  }",
+            "}"
+          ].join('\n')
         }, {
           it: 'should report appinstance.container',
           filename: 'app/initializer/foo.js',
           errors: 1,
-          code: function() {
-            var initialize = function(appInstance) {
-              var store = appInstance.container.lookup('service:store');
-
-              store.pushPayload('<payload here>');
-            }
-
-            return {
-              name: 'preload-store',
-              initialize: initialize
-            }
-          }
+          code: [
+            "var initialize = function(appInstance) {",
+            "  var store = appInstance.container.lookup('service:store');",
+            "",
+            "  store.pushPayload('<payload here>');",
+            "}",
+            "",
+            "export default {",
+            "  name: 'preload-store',",
+            "  initialize: initialize",
+            "}"
+          ].join('\n')
         }, {
           it: 'should report anonymous initializer',
           filename: 'app/initializer/foo.js',
           errors: 1,
-          code: function() {
-            return {
-              name: 'inject-session',
-              initialize: function(application) {
-                application.container.lookup('service:session');
-              }
-            }
-          }
+          code: [
+            "export default {",
+            "  name: 'inject-session',",
+            "  initialize: function(application) {",
+            "    application.container.lookup('service:session');",
+            "  }",
+            "}"
+          ].join('\n')
         }
         /* jshint ignore:end */
       ]);

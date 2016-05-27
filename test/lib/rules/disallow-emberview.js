@@ -65,8 +65,8 @@ describe('lib/rules/disallow-emberview', function () {
             });
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
-            message: 'Ember.View is deprecated in Ember 1.13'
+            column: 0, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
+            message: 'disallowEmberView: Ember.View is deprecated in Ember 1.13'
           }]
         }, {
           it: 'should report deprecated use',
@@ -78,8 +78,8 @@ describe('lib/rules/disallow-emberview', function () {
             });
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
-            message: 'Ember.LinkView is deprecated in Ember 1.13'
+            column: 0, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
+            message: 'disallowEmberView: Ember.LinkView is deprecated in Ember 1.13'
           }]
         }, {
           it: 'should report deprecated use',
@@ -91,8 +91,8 @@ describe('lib/rules/disallow-emberview', function () {
             });
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
-            message: 'Ember.Select is deprecated in Ember 1.13'
+            column: 0, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
+            message: 'disallowEmberView: Ember.Select is deprecated in Ember 1.13'
           }]
         }, {
           it: 'should report deprecated use',
@@ -104,8 +104,8 @@ describe('lib/rules/disallow-emberview', function () {
             });
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
-            message: 'Ember.ContainerView is deprecated in Ember 1.13'
+            column: 0, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
+            message: 'disallowEmberView: Ember.ContainerView is deprecated in Ember 1.13'
           }]
         }, {
           it: 'should report deprecated use',
@@ -117,8 +117,8 @@ describe('lib/rules/disallow-emberview', function () {
             });
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
-            message: 'Ember.CollectionView is deprecated in Ember 1.13'
+            column: 0, line: 1, filename: 'input', rule: 'disallowEmberView', fixed: undefined,
+            message: 'disallowEmberView: Ember.CollectionView is deprecated in Ember 1.13'
           }]
         }
         /* jshint ignore:end */

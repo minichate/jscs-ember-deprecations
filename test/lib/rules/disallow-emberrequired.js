@@ -36,8 +36,8 @@ describe('lib/rules/disallow-emberrequired', function () {
             Ember.required();
           },
           errors: [{
-            column: 0, line: 1, filename: 'input', rule: 'disallowEmberRequired', fixed: undefined,
-            message: 'Ember.required is deprecated in Ember 1.12'
+            column: 8, line: 1, filename: 'input', rule: 'disallowEmberRequired', fixed: undefined,
+            message: 'disallowEmberRequired: Ember.required is deprecated in Ember 1.12'
           }]
         }
         /* jshint ignore:end */

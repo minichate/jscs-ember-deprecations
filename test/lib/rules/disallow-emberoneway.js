@@ -55,8 +55,8 @@ describe('lib/rules/disallow-emberoneway', function () {
             });
           },
           errors: [{
-            column: 12, line: 3, filename: 'input', rule: 'disallowEmberOneway', fixed: undefined,
-            message: 'Ember.oneWay is deprecated in Ember 1.13'
+            column: 25, line: 3, filename: 'input', rule: 'disallowEmberOneway', fixed: undefined,
+            message: 'disallowEmberOneway: Ember.oneWay is deprecated in Ember 1.13'
           }]
         }
         /* jshint ignore:end */
