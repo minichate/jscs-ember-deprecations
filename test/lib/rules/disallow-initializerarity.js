@@ -27,64 +27,64 @@ describe('lib/rules/disallow-initializerarity', function () {
         {
           it: 'should not report identifier initializer',
           filename: 'app/initializer/foo.js',
-          code: function() {
-            var initialize = function(application) {
-              application.inject('route', 'service:session');
-            }
-
-            return {
-              name: 'inject-session',
-              initialize: initialize
-            }
-          }
+          code: [
+            "var initialize = function(application) {",
+            "  application.inject('route', 'service:session');",
+            "}",
+            "",
+            "export default {",
+            "  name: 'inject-session',",
+            "  initialize: initialize",
+            "}"
+          ].join('\n')
         }, {
           it: 'should not report anonymous initializer',
           filename: 'app/initializer/foo.js',
-          code: function() {
-            return {
-              name: 'inject-session',
-              initialize: function(application) {
-                application.inject('route', 'service:session');
-              }
-            }
-          }
+          code: [
+            "export default {",
+            "  name: 'inject-session',",
+            "  initialize: function(application) {",
+            "    application.inject('route', 'service:session');",
+            "  }",
+            "}"
+          ].join('\n')
         }, {
           it: 'should not report deprecated initializer in non-initializer path',
           filename: 'app/controller/foo.js',
-          code: function() {
-            return {
-              name: 'inject-session',
-              initialize: function(application, thisWouldNormallyBeBad) {
-                application.inject('route', 'service:session');
-              }
-            }
-          }
+          code: [
+            "export default {",
+            "  name: 'inject-session',",
+            "  initialize: function(application, thisWouldNormallyBeBad) {",
+            "    application.inject('route', 'service:session');",
+            "  }",
+            "}"
+          ].join('\n')
         }, {
           it: 'should report deprecated use identifier initializer',
           filename: 'app/initializer/foo.js',
           errors: 1,
-          code: function() {
-            var initialize = function(container, application) {
-              application.inject('route', 'service:session');
-            }
-
-            return {
-              name: 'inject-session',
-              initialize: initialize
-            }
-          }
+          code: [
+            "var initialize = function(container, application) {",
+            "  application.inject('route', 'service:session');",
+            "}",
+            "",
+            "export default {",
+            "  name: 'inject-session',",
+            "  initialize: initialize",
+            "}"
+          ].join('\n')
         }, {
           it: 'should report deprecated use anonymous initializer',
           filename: 'app/initializer/foo.js',
           errors: 1,
-          code: function() {
-            return {
-              name: 'inject-session',
-              initialize: function(container, application) {
-                application.inject('route', 'service:session');
-              }
-            }
-          }
+          code: [
+           "export default {",
+           "  name: 'inject-session',",
+           "  initialize: function(container, application) {",
+           "    application.inject('route', 'service:session');",
+           "  }",
+           "}"
+          ].join('\n')
         }
         /* jshint ignore:end */
       ]);

@@ -72,8 +72,8 @@ describe('lib/rules/disallow-instanceinitializer', function () {
             });
           },
           errors: [{
-            column: 16, line: 6, filename: 'input', rule: 'disallowInstanceInInitializer', fixed: undefined,
-            message: 'Instances in initializers are deprecated in Ember 1.11'
+            column: 31, line: 6, filename: 'input', rule: 'disallowInstanceInInitializer', fixed: undefined,
+            message: 'disallowInstanceInInitializer: Instances in initializers are deprecated in Ember 1.11'
           }]
         }
         /* jshint ignore:end */

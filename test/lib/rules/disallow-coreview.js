@@ -52,8 +52,8 @@ describe('lib/rules/disallow-coreview', function () {
             });
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowCoreView', fixed: undefined,
-            message: 'CoreView is deprecated in Ember 1.12'
+            column: 0, line: 1, filename: 'input', rule: 'disallowCoreView', fixed: undefined,
+            message: 'disallowCoreView: CoreView is deprecated in Ember 1.12'
           }]
         }, {
           it: 'should report deprecated use',
@@ -64,8 +64,8 @@ describe('lib/rules/disallow-coreview', function () {
             });
           },
           errors: [{
-            column: 16, line: 1, filename: 'input', rule: 'disallowCoreView', fixed: undefined,
-            message: 'CoreView is deprecated in Ember 1.12'
+            column: 0, line: 1, filename: 'input', rule: 'disallowCoreView', fixed: undefined,
+            message: 'disallowCoreView: CoreView is deprecated in Ember 1.12'
           }]
         }
         /* jshint ignore:end */

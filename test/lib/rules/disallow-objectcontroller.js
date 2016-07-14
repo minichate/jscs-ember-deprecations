@@ -52,8 +52,8 @@ describe('lib/rules/disallow-objectcontroller', function () {
             });
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowObjectController', fixed: undefined,
-            message: 'ObjectController is deprecated in Ember 1.11'
+            column: 0, line: 1, filename: 'input', rule: 'disallowObjectController', fixed: undefined,
+            message: 'disallowObjectController: ObjectController is deprecated in Ember 1.11'
           }]
         }, {
           it: 'should report deprecated use',
@@ -64,8 +64,8 @@ describe('lib/rules/disallow-objectcontroller', function () {
             });
           },
           errors: [{
-            column: 16, line: 1, filename: 'input', rule: 'disallowObjectController', fixed: undefined,
-            message: 'ObjectController is deprecated in Ember 1.11'
+            column: 0, line: 1, filename: 'input', rule: 'disallowObjectController', fixed: undefined,
+            message: 'disallowObjectController: ObjectController is deprecated in Ember 1.11'
           }]
         }
         /* jshint ignore:end */

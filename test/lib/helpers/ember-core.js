@@ -3,7 +3,6 @@
 var EmberCore = require('../../../lib/helpers/ember-core');
 var JsFile = require('jscs/lib/js-file');
 var createFixtureLoader = require('fixture-loader');
-var esprima = require('esprima');
 var assert = require('assert');
 
 describe('lib/helpers/ember-core', function() {
@@ -21,8 +20,7 @@ describe('lib/helpers/ember-core', function() {
       var fixture = fixtureLoader.loadString(BASE_PATH, 'basic.fixture');
       var file = new JsFile({
         source: fixture,
-        filename: 'basic.fixture',
-        esprima: esprima
+        filename: 'basic.fixture'
       });
       ember = new EmberCore(file);
     });
@@ -37,22 +35,22 @@ describe('lib/helpers/ember-core', function() {
       assert(3 === viewClasses.length);
 
       // App.TeacherView
-      assert(17 === viewClasses[0].loc.start.line);
-      assert(24 === viewClasses[0].loc.start.column);
-      assert(17 === viewClasses[0].loc.end.line);
-      assert(28 === viewClasses[0].loc.end.column);
+      assert(17 === viewClasses[0].getLoc().start.line);
+      assert(24 === viewClasses[0].getLoc().start.column);
+      assert(17 === viewClasses[0].getLoc().end.line);
+      assert(28 === viewClasses[0].getLoc().end.column);
 
       // App.StudentView
-      assert(21 === viewClasses[1].loc.start.line);
-      assert(24 === viewClasses[1].loc.start.column);
-      assert(21 === viewClasses[1].loc.end.line);
-      assert(28 === viewClasses[1].loc.end.column);
+      assert(21 === viewClasses[1].getLoc().start.line);
+      assert(24 === viewClasses[1].getLoc().start.column);
+      assert(21 === viewClasses[1].getLoc().end.line);
+      assert(28 === viewClasses[1].getLoc().end.column);
 
       // App.StudentView.emptyView
-      assert(23 === viewClasses[2].loc.start.line);
-      assert(21 === viewClasses[2].loc.start.column);
-      assert(23 === viewClasses[2].loc.end.line);
-      assert(25 === viewClasses[2].loc.end.column);
+      assert(23 === viewClasses[2].getLoc().start.line);
+      assert(21 === viewClasses[2].getLoc().start.column);
+      assert(23 === viewClasses[2].getLoc().end.line);
+      assert(25 === viewClasses[2].getLoc().end.column);
     });
 
     it('should find Ember helper functions', function() {
@@ -74,10 +72,10 @@ describe('lib/helpers/ember-core', function() {
       assert(1 === properties.length);
 
       var property = properties[0];
-      assert('Property' === property.type);
+      assert('ObjectProperty' === property.type);
       assert('students' === property.key.name);
       assert('Identifier' === property.key.type);
-      assert(null === property.value.value);
+      assert('NullLiteral' === property.value.type);
     });
   });
 
@@ -86,8 +84,7 @@ describe('lib/helpers/ember-core', function() {
       var fixture = fixtureLoader.loadString(BASE_PATH, 'basic-no-import.fixture');
       var file = new JsFile({
         source: fixture,
-        filename: 'basic-no-import.fixture',
-        esprima: esprima
+        filename: 'basic-no-import.fixture'
       });
       ember = new EmberCore(file);
     });
@@ -97,22 +94,22 @@ describe('lib/helpers/ember-core', function() {
       assert(3 === viewClasses.length);
 
       // App.TeacherView
-      assert(15 === viewClasses[0].loc.start.line);
-      assert(24 === viewClasses[0].loc.start.column);
-      assert(15 === viewClasses[0].loc.end.line);
-      assert(28 === viewClasses[0].loc.end.column);
+      assert(15 === viewClasses[0].getLoc().start.line);
+      assert(24 === viewClasses[0].getLoc().start.column);
+      assert(15 === viewClasses[0].getLoc().end.line);
+      assert(28 === viewClasses[0].getLoc().end.column);
 
       // App.StudentView
-      assert(19 === viewClasses[1].loc.start.line);
-      assert(24 === viewClasses[1].loc.start.column);
-      assert(19 === viewClasses[1].loc.end.line);
-      assert(28 === viewClasses[1].loc.end.column);
+      assert(19 === viewClasses[1].getLoc().start.line);
+      assert(24 === viewClasses[1].getLoc().start.column);
+      assert(19 === viewClasses[1].getLoc().end.line);
+      assert(28 === viewClasses[1].getLoc().end.column);
 
       // App.StudentView.emptyView
-      assert(21 === viewClasses[2].loc.start.line);
-      assert(21 === viewClasses[2].loc.start.column);
-      assert(21 === viewClasses[2].loc.end.line);
-      assert(25 === viewClasses[2].loc.end.column);
+      assert(21 === viewClasses[2].getLoc().start.line);
+      assert(21 === viewClasses[2].getLoc().start.column);
+      assert(21 === viewClasses[2].getLoc().end.line);
+      assert(25 === viewClasses[2].getLoc().end.column);
     });
 
     it('should find .extend() blocks', function() {
@@ -124,10 +121,10 @@ describe('lib/helpers/ember-core', function() {
       assert(1 === properties.length);
 
       var property = properties[0];
-      assert('Property' === property.type);
+      assert('ObjectProperty' === property.type);
       assert('students' === property.key.name);
       assert('Identifier' === property.key.type);
-      assert(null === property.value.value);
+      assert('NullLiteral' === property.value.type);
     });
   });
 
@@ -136,8 +133,7 @@ describe('lib/helpers/ember-core', function() {
       var fixture = fixtureLoader.loadString(BASE_PATH, 'bad-import.fixture');
       var file = new JsFile({
         source: fixture,
-        filename: 'bad-import.fixture',
-        esprima: esprima
+        filename: 'bad-import.fixture'
       });
       ember = new EmberCore(file);
     });
@@ -152,8 +148,7 @@ describe('lib/helpers/ember-core', function() {
       var fixture = fixtureLoader.loadString(BASE_PATH, 'em-import.fixture');
       var file = new JsFile({
         source: fixture,
-        filename: 'em-import.fixture',
-        esprima: esprima
+        filename: 'em-import.fixture'
       });
       ember = new EmberCore(file);
     });
@@ -173,8 +168,7 @@ describe('lib/helpers/ember-core', function() {
       var fixture = fixtureLoader.loadString(BASE_PATH, 'multiple-ember-import.fixture');
       var file = new JsFile({
         source: fixture,
-        filename: 'multiple-ember-import.fixture',
-        esprima: esprima
+        filename: 'multiple-ember-import.fixture'
       });
       ember = new EmberCore(file);
     });
@@ -189,8 +183,7 @@ describe('lib/helpers/ember-core', function() {
       var fixture = fixtureLoader.loadString(BASE_PATH, 'mixin.fixture');
       var file = new JsFile({
         source: fixture,
-        filename: 'mixin.fixture',
-        esprima: esprima
+        filename: 'mixin.fixture'
       });
       ember = new EmberCore(file);
     });

@@ -115,8 +115,23 @@ function rulesChecker(opts) {
                 'Expect ' + test.errors + ' error(s)'
                 : 'Unexpected error(s)');
           } else if (Array.isArray(test.errors)) {
-            expect(errors)
-              .to.containSubset(test.errors);
+            test.errors.forEach(function(expectedError) {
+              var found;
+              var error;
+              for (var i = 0; i < errors.length; i++) {
+                error = errors[i];
+                found = expectedError.rule === error.rule &&
+                        expectedError.message === error.message &&
+                        expectedError.filename === error.filename &&
+                        expectedError.line === error.line &&
+                        expectedError.column === error.column;
+                if (found) {
+                  break;
+                }
+              }
+
+              expect(found).to.not.eq(undefined);
+            });
           } else {
             expect(checked.getErrorCount())
               .to.not.eq(0);

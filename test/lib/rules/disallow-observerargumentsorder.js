@@ -41,7 +41,7 @@ describe('lib/rules/disallow-observerargumentsorder', function () {
           },
           errors: [{
             column: 15, line: 1, filename: 'input', rule: 'disallowObserverArgumentOrdering', fixed: undefined,
-            message: 'Ember.observer must take a callable as the final argument as of Ember 1.13'
+            message: 'disallowObserverArgumentOrdering: Ember.observer must take a callable as the final argument as of Ember 1.13'
           }]
         }
         /* jshint ignore:end */

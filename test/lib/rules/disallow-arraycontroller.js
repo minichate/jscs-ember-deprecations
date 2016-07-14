@@ -52,8 +52,8 @@ describe('lib/rules/disallow-arraycontroller', function () {
             });
           },
           errors: [{
-            column: 6, line: 1, filename: 'input', rule: 'disallowArrayController', fixed: undefined,
-            message: 'ArrayController is deprecated in Ember 1.13'
+            column: 0, line: 1, filename: 'input', rule: 'disallowArrayController', fixed: undefined,
+            message: 'disallowArrayController: ArrayController is deprecated in Ember 1.13'
           }]
         }, {
           it: 'should report deprecated use',
@@ -64,8 +64,8 @@ describe('lib/rules/disallow-arraycontroller', function () {
             });
           },
           errors: [{
-            column: 16, line: 1, filename: 'input', rule: 'disallowArrayController', fixed: undefined,
-            message: 'ArrayController is deprecated in Ember 1.13'
+            column: 0, line: 1, filename: 'input', rule: 'disallowArrayController', fixed: undefined,
+            message: 'disallowArrayController: ArrayController is deprecated in Ember 1.13'
           }]
         }
         /* jshint ignore:end */
