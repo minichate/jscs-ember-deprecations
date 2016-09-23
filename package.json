@@ -21,12 +21,13 @@
     "coveralls": "npm run coverage | coveralls",
     "travis": "npm run test && npm run coveralls"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cst": "^0.4.6"
+  },
   "devDependencies": {
     "chai": "^3.4.1",
     "chai-subset": "^1.2.2",
     "coveralls": "^2.11.4",
-    "cst": "^0.4.6",
     "fixture-loader": "^1.0.1",
     "istanbul": "^0.4.0",
     "jscs": "^3.0.4",
